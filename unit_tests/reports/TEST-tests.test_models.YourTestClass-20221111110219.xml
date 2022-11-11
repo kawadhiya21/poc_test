@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.test_models.YourTestClass-20221111110219" tests="3" file="tests/test_models.py" time="0.001" timestamp="2022-11-11T05:32:19" failures="0" errors="0" skipped="0">
+	<testcase classname="tests.test_models.YourTestClass" name="test_false_is_false" time="0.000" timestamp="2022-11-11T05:32:19" file="tests/test_models.py" line="12">
+		<system-out><![CDATA[setUp: Run once for every test method to setup clean data.
+Method: test_false_is_false.
+]]></system-out>
+	</testcase>
+	<testcase classname="tests.test_models.YourTestClass" name="test_false_is_true" time="0.000" timestamp="2022-11-11T05:32:19" file="tests/test_models.py" line="16">
+		<system-out><![CDATA[setUp: Run once for every test method to setup clean data.
+Method: test_false_is_true.
+]]></system-out>
+	</testcase>
+	<testcase classname="tests.test_models.YourTestClass" name="test_one_plus_one_equals_two" time="0.000" timestamp="2022-11-11T05:32:19" file="tests/test_models.py" line="20">
+		<system-out><![CDATA[setUp: Run once for every test method to setup clean data.
+Method: test_one_plus_one_equals_two.
+]]></system-out>
+	</testcase>
+</testsuite>
