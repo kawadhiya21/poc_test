@@ -13,7 +13,7 @@ describe("API Tests", function() {
     it("Page Does Not Exist", function(done){
         request
       .get("/page_does_not_exist")
-      .expect(404, {"status":"bad_request", "response": "page does not exist"}, done);
+      .expect(200, {"status":"bad_request", "response": "page does not exist"}, done);
     });
 
     it("Success Endpoint Should return 200", function(done){
