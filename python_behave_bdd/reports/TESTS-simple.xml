@@ -1,0 +1,52 @@
+<testsuite name="simple.showing off behave" tests="5" errors="0" failures="0" skipped="0" time="0.000363" timestamp="2022-11-18T15:45:35.897751" hostname="Bipuls-MacBook-Pro.local"><testcase classname="simple.showing off behave" name="run a simple test" status="passed" time="0.000129"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: run a simple test
+    Given we have behave installed ... passed in 0.000s
+    When we implement a test ... passed in 0.000s
+    Then behave will test it for us! ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="simple.showing off behave" name="Verify Book name." status="passed" time="6.1e-05"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: Verify Book name.
+    Given Book details. ... passed in 0.000s
+    Then Verify book name. ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="simple.showing off behave" name="Dashboard Search Page" status="passed" time="5.7e-05"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: Dashboard Search Page
+    Given search query red ... passed in 0.000s
+    Then should open search page with results of red ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="simple.showing off behave" name="Login Page Bad Password" status="passed" time="5.7e-05"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: Login Page Bad Password
+    Given login page with incorrect password ... passed in 0.000s
+    Then credetials not correct should be shown ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="simple.showing off behave" name="No Search Results should be shown" status="passed" time="5.9e-05"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: No Search Results should be shown
+    Given search query alcndslkcnalnclka ... passed in 0.000s
+    Then No search results found should be shown ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>
