@@ -52,7 +52,7 @@ def step_impl(context):
 
 @given(u'search query red')
 def step_impl(context):
-    assert True is not False
+    assert True is not True
 
 
 @then(u'should open search page with results of red')
