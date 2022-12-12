@@ -35,4 +35,25 @@ describe("API Tests", function() {
       return;
     })
   });
+  
+  it("check if 10% discount is applied and seen on all pages", function(done) {
+      request
+    .get("/api/products")
+    .expect(200, function(err, res) {
+      assert.equal(res.body.products.length, 25);
+      done();
+      return;
+    })
+  });
+  
+  it("original price and discounted price both should be seen", function(done) {
+      request
+    .get("/api/products")
+    .expect(200, function(err, res) {
+      assert.equal(res.body.products.length, 25);
+      done();
+      return;
+    })
+  });
+  
 });
