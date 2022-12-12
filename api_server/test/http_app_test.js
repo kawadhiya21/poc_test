@@ -1,46 +1,38 @@
 var assert = require('assert');
 var http_controller =  require('../src/http_server');
 server = http_controller;
-var request = require("supertest").agent(server);
+var request = require("supertest")
 
+request = request('https://teststack.bsstag.com');
 
 describe("API Tests", function() {
-    it("Health Check", function(done){
-        request
-      .get("/")
-      .expect(200, {"status":"success"}, done);
-    });
-    it("Page Does Not Exist", function(done){
-        request
-      .get("/page_does_not_exist")
-      .expect(404, {"status":"bad_request", "response": "page does not exist"}, done);
-    });
+  it("should give Existing Orders length", function(done) {
+      request
+    .get("/api/orders?userName=existing_orders_user")
+    .expect(200, function(err, res) {
+      assert.equal(res.body.orders.length, 5);
+      done();
+      return;
+    })
+  });
 
-    it("Success Endpoint Should return 200", function(done){
-        request
-      .get("/success")
-      .expect(200, {"status":"success"}, done);
-    });
+  it("should test if first item is iphone 12", function(done) {
+      request
+    .get("/api/orders?userName=existing_orders_user")
+    .expect(200, function(err, res) {
+      assert.equal(res.body.orders[0]["items"][0]["title"], "iPhone 12");
+      done();
+      return;
+    })
+  });
 
-    it("echo", function(done){
-        request
-      .get("/echo?value=hello")
-      .expect(200, {"status":"success", "message": "You passed hello"}, done);
-    });
-
-    it("Login Should return 200", function(done){
-        request
-      .get("/login")
-      .expect(200, {"message":"successfully logged in"}, done);
-    });
-
-    it("Server Should return 500", function(done){
-        request
-      .get("/server_error")
-      .expect(500, {"status":"error", "message":"some exception occureed"}, done);
-    });
-
-    after(function () {
-        server.close();
-    });
+  it("should give Existing products length", function(done) {
+      request
+    .get("/api/products")
+    .expect(200, function(err, res) {
+      assert.equal(res.body.products.length, 25);
+      done();
+      return;
+    })
+  });
 });
