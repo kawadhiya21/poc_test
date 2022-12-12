@@ -9,7 +9,7 @@ describe("API Tests", function() {
   it("should give Existing Orders length", function(done) {
       request
     .get("/api/orders?userName=existing_orders_user")
-    .expect(200, function(err, res) {
+    .expect(401, function(err, res) {
       assert.equal(res.body.orders.length, 5);
       done();
       return;
