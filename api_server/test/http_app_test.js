@@ -10,7 +10,7 @@ describe("API Tests", function() {
       request
     .get("/api/orders?userName=existing_orders_user")
     .expect(401, function(err, res) {
-      assert.equal(res.body.orders.length, 5);
+      assert.equal(res.body.orders.length, 50);
       done();
       return;
     })
